@@ -1,0 +1,12 @@
+{
+  "name": "algorithms",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "tsx": "^4.10.0"
+  },
+  "scripts": {
+    "dev": "yarn tsx index.ts"
+  }
+}
