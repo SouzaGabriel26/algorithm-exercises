@@ -9,33 +9,27 @@ export class TreeNode {
     this.right = right;
   }
 
-  public static getVal(node: TreeNode): number {
-    return node.val;
+  public getVal(): number {
+    return this.val;
   }
 
-  public static getLeft(node: TreeNode): TreeNode | null {
-    return node.left;
+  public getLeft(): TreeNode | null {
+    return this.left;
   }
 
-  public static getRight(node: TreeNode): TreeNode | null {
-    return node.right;
+  public getRight(): TreeNode | null {
+    return this.right;
   }
 
-  public static setVal(node: TreeNode, val: number): void {
-    if (node) {
-      node.val = val;
-    }
+  public setVal(val: number): void {
+    this.val = val;
   }
 
-  public setLeft(node: TreeNode | null): void {
-    if (this) {
-      this.left = node;
-    }
+  public setLeft(node: TreeNode): void {
+    this.left = node;
   }
 
-  public setRight(node: TreeNode | null): void {
-    if (this) {
-      this.right = node;
-    }
+  public setRight(node: TreeNode): void {
+    this.right = node;
   }
 }
