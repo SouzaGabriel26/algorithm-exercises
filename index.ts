@@ -1,15 +1,28 @@
 import { BinarySearchTree } from "./BST/BinarySearchTree";
-import { TreeNode } from "./BST/TreeNode";
 import { rangeSumBST } from "./BST/rangeSumBST";
 
-/* const test = new TreeNode(5)
-test.setLeft(new TreeNode(2, new TreeNode(1), new TreeNode(3)))
-test.setRight(new TreeNode(8, new TreeNode(7), new TreeNode(10)))
+const TreeToTestRangeSumBST = new BinarySearchTree();
+TreeToTestRangeSumBST.insert(5);
+TreeToTestRangeSumBST.insert(2);
+TreeToTestRangeSumBST.insert(1);
+TreeToTestRangeSumBST.insert(3);
+TreeToTestRangeSumBST.insert(8);
+TreeToTestRangeSumBST.insert(7);
+TreeToTestRangeSumBST.insert(10);
 
-const sum = rangeSumBST(test, 8, 10) // 8 + 10 = 18
+const sum = rangeSumBST(TreeToTestRangeSumBST.getRoot(), 8, 10)
 
-console.log(test)
-console.log(sum) */
+console.log(`
+---------------------------------
+  **Testing rangeSumBST algorithm**
+
+  Tree: ${JSON.stringify(TreeToTestRangeSumBST)}
+
+  Expected output: 18 (8 + 10)
+  Output: ${sum}
+--------------------------------
+`)
+
 
 const Bst = new BinarySearchTree();
 
@@ -18,14 +31,18 @@ Bst.insert(10);
 Bst.insert(2);
 Bst.insert(50);
 
-console.log(Bst.getQuantity(), ' quantity');
-console.log(Bst.search(10));
+console.log(`
+---------------------------------
+  **Testing BinarySearchTree methods**
 
-const preOrder = Bst.preOrder();
-console.log(preOrder)
+  Tree: ${JSON.stringify(Bst)}
 
-const inOrder = Bst.inOrder();
-console.log(inOrder)
+  Expected quantity: 4
+  quantity: ${Bst.getQuantity()}
 
-const postOrder = Bst.postOrder();
-console.log(postOrder)
+  Tree Traversal:
+    - preOrder: ${Bst.preOrder()}
+    - inOrder: ${Bst.inOrder()}
+    - postOrder: ${Bst.postOrder()}
+---------------------------------
+`)
