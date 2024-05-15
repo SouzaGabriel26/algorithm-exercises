@@ -44,5 +44,12 @@ console.log(`
     - preOrder: ${Bst.preOrder()}
     - inOrder: ${Bst.inOrder()}
     - postOrder: ${Bst.postOrder()}
+
+  Remove 5:
+    ${Bst.remove(10)}
+    - expected quantity: 3
+    - quantity: ${Bst.getQuantity()}
+
+  Tree after remove 5: ${JSON.stringify(Bst)}
 ---------------------------------
 `)

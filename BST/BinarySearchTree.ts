@@ -96,4 +96,44 @@ export class BinarySearchTree {
     return result;
   }
 
+  public remove(value: number): boolean {
+    this.root = removeRecursive(value, this.root);
+    
+    if (!this.root) return false;
+    this.quantity--;
+    return true;
+
+    function removeRecursive(value: number, node: TreeNode | null): TreeNode | null {
+      if (!node) return null;
+      
+      if (value > node.getVal()) {
+        node.setRight(removeRecursive(value, node.getRight()))
+      } else if (value < node.getVal()) {
+        node.setLeft(removeRecursive(value, node.getLeft()))
+      } else {
+        // node founded
+        if (!node.getLeft() && !node.getRight()) {
+          node = null;
+        } else if (!node.getLeft()) {
+          node = node.getRight();
+        } else if (!node.getRight()) {
+          node = node.getLeft();
+        } else {
+          let maxLeftNode = node.getLeft(); 
+          
+          while (maxLeftNode?.getRight()) {
+            maxLeftNode = maxLeftNode.getRight();
+          }
+
+          node.setVal(maxLeftNode?.getVal() ?? 0);
+
+          if (maxLeftNode?.getVal() && maxLeftNode.getVal() > 0) {
+            node.setLeft(removeRecursive(maxLeftNode?.getVal(), node.getLeft()));
+          }
+        }
+      }
+      return node;
+    }
+  }
+
 }

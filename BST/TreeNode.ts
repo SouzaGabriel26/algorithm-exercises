@@ -25,11 +25,11 @@ export class TreeNode {
     this.val = val;
   }
 
-  public setLeft(node: TreeNode): void {
+  public setLeft(node: TreeNode | null): void {
     this.left = node;
   }
 
-  public setRight(node: TreeNode): void {
+  public setRight(node: TreeNode | null): void {
     this.right = node;
   }
 }
