@@ -2,7 +2,7 @@
 // leetcode - Tree problem
 // https://leetcode.com/problems/find-a-corresponding-node-of-a-binary-tree-in-a-clone-of-that-tree/submissions/1259144870
 
-import { TreeNode } from "./TreeNode";
+import { TreeNode } from "../TreeNode";
 
 export function getTargetCopy(original: TreeNode | null, cloned: TreeNode | null, target: TreeNode | null): TreeNode | null {
 

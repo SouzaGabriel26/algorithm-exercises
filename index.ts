@@ -1,6 +1,6 @@
 import { BinarySearchTree } from "./BST/BinarySearchTree";
-import { getTargetCopy } from "./BST/getTargetCopy";
-import { rangeSumBST } from "./BST/rangeSumBST";
+import { getTargetCopy } from "./BST/leetcode-exercises/getTargetCopy";
+import { rangeSumBST } from "./BST/leetcode-exercises/rangeSumBST";
 
 const TreeToTestRangeSumBST = new BinarySearchTree();
 TreeToTestRangeSumBST.insert(5);

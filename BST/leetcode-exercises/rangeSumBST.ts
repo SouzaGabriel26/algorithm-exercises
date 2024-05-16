@@ -1,4 +1,4 @@
-import { TreeNode } from "./TreeNode";
+import { TreeNode } from "../TreeNode";
 
 export function rangeSumBST(root: TreeNode | null, low: number, high: number): number {
   let sum=0;
