@@ -12,7 +12,7 @@ A full binary tree is a binary tree where each node has either 0 or 2 children.
 
 A leaf node is a node that has zero children. */
 
-// Solution: https://leetcode.com/problems/evaluate-boolean-binary-tree/submissions/1259975008
+// Solution: https://leetcode.com/problems/evaluate-boolean-binary-tree/submissions/1259989756
 
 import { TreeNode } from "../TreeNode";
 
@@ -32,17 +32,13 @@ export function evaluateTree(root: TreeNode | null) {
     1: true,
   }
 
-  return compareNode(root);
-
-  function compareNode(node: TreeNode) {
-    if (!node.left && !node.right) {
-      return leafMapper[node.getVal()];
+  if (!root.getLeft() && !root.getRight()) {
+    return leafMapper[root.getVal()];
+  } else {
+    if (root.getVal() === 2) {
+      return evaluateTree(root.getLeft()) || evaluateTree(root.getRight());
     } else {
-      if (node.getVal() === 2) {
-        return compareNode(node.left!) || compareNode(node.right!);
-      } else {
-        return compareNode(node.left!) && compareNode(node.right!);
-      }
+      return evaluateTree(root.getLeft()) && evaluateTree(root.getRight());
     }
   }
 }
