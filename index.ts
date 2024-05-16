@@ -1,4 +1,6 @@
 import { BinarySearchTree } from "./BST/BinarySearchTree";
+import { TreeNode } from "./BST/TreeNode";
+import { evaluateTree } from "./BST/leetcode-exercises/evaluateTree";
 import { getTargetCopy } from "./BST/leetcode-exercises/getTargetCopy";
 import { rangeSumBST } from "./BST/leetcode-exercises/rangeSumBST";
 
@@ -71,4 +73,27 @@ const result = getTargetCopy(testingBst.getRoot(), clonedTestingBst.getRoot(), t
 
 console.log(`
   getTargetCopy result: ${JSON.stringify(result)}
+
+
+  -----------------------------------------------
 `)
+
+const subtreeLeft = new TreeNode(1)
+const subtreeRight = new TreeNode(3, new TreeNode(0), new TreeNode(1))
+const treeToTestEvaluate = new TreeNode(2, subtreeLeft, subtreeRight);
+console.log('Evaluate Tree\n')
+
+console.log(treeToTestEvaluate)
+
+const evaluatedTree = evaluateTree(treeToTestEvaluate);
+console.log(`
+  Tree example:
+          2
+        /   |
+      1       3
+            /   |
+          0       1
+`)
+
+
+console.log(`\nExpected output: true\nOutput: ${evaluatedTree}`)
