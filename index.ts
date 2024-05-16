@@ -1,4 +1,5 @@
 import { BinarySearchTree } from "./BST/BinarySearchTree";
+import { getTargetCopy } from "./BST/getTargetCopy";
 import { rangeSumBST } from "./BST/rangeSumBST";
 
 const TreeToTestRangeSumBST = new BinarySearchTree();
@@ -52,4 +53,22 @@ console.log(`
 
   Tree after remove 5: ${JSON.stringify(Bst)}
 ---------------------------------
+`)
+
+
+const testingBst = new BinarySearchTree()
+testingBst.insert(5)
+testingBst.insert(7)
+testingBst.insert(2)
+testingBst.insert(10)
+testingBst.insert(1)
+
+const clonedTestingBst = testingBst;
+
+const target = testingBst.search(2);
+
+const result = getTargetCopy(testingBst.getRoot(), clonedTestingBst.getRoot(), target);
+
+console.log(`
+  getTargetCopy result: ${JSON.stringify(result)}
 `)
