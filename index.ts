@@ -3,6 +3,7 @@ import { TreeNode } from "./BST/TreeNode";
 import { balanceBST } from "./BST/leetcode-exercises/balanceBST";
 import { evaluateTree } from "./BST/leetcode-exercises/evaluateTree";
 import { getTargetCopy } from "./BST/leetcode-exercises/getTargetCopy";
+import { increasingBST } from "./BST/leetcode-exercises/increasingBST";
 import { mergeTrees } from "./BST/leetcode-exercises/mergeTrees";
 import { rangeSumBST } from "./BST/leetcode-exercises/rangeSumBST";
 
@@ -143,3 +144,10 @@ console.log(`
 console.log('Tree 1: ', root1)
 console.log('Tree 2: ', root2)
 console.log('Merged Tree: ', mergedTree)
+
+
+console.log(`
+  TESTING INCREASING BINARY SEARCH TREE
+`)
+
+console.log(JSON.stringify(increasingBST(balancedTree)))
