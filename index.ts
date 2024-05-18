@@ -1,5 +1,6 @@
 import { BinarySearchTree } from "./BST/BinarySearchTree";
 import { TreeNode } from "./BST/TreeNode";
+import { balanceBST } from "./BST/leetcode-exercises/balanceBST";
 import { evaluateTree } from "./BST/leetcode-exercises/evaluateTree";
 import { getTargetCopy } from "./BST/leetcode-exercises/getTargetCopy";
 import { rangeSumBST } from "./BST/leetcode-exercises/rangeSumBST";
@@ -96,4 +97,33 @@ console.log(`
 `)
 
 
-console.log(`\nExpected output: true\nOutput: ${evaluatedTree}`)
+console.log(`\nExpected output: true\nOutput: ${evaluatedTree}
+
+
+
+-----------------------------------------------
+`)
+
+
+
+const tree = new BinarySearchTree();
+tree.insert(10)
+tree.insert(50)
+tree.insert(2)
+tree.insert(1)
+tree.insert(501)
+tree.insert(5)
+tree.insert(8)
+
+console.log(`
+  tree before balance:
+`)
+console.log(tree)
+
+console.log('\n\n')
+
+console.log(`
+  tree after balance:
+`)
+const balancedTree = balanceBST(tree.getRoot());
+console.log(balancedTree)
