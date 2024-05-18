@@ -3,6 +3,7 @@ import { TreeNode } from "./BST/TreeNode";
 import { balanceBST } from "./BST/leetcode-exercises/balanceBST";
 import { evaluateTree } from "./BST/leetcode-exercises/evaluateTree";
 import { getTargetCopy } from "./BST/leetcode-exercises/getTargetCopy";
+import { mergeTrees } from "./BST/leetcode-exercises/mergeTrees";
 import { rangeSumBST } from "./BST/leetcode-exercises/rangeSumBST";
 
 const TreeToTestRangeSumBST = new BinarySearchTree();
@@ -127,3 +128,18 @@ console.log(`
 `)
 const balancedTree = balanceBST(tree.getRoot());
 console.log(balancedTree)
+
+
+
+const root1 = new TreeNode(1, new TreeNode(3), new TreeNode(2))
+const root2 = new TreeNode(2, new TreeNode(2), new TreeNode( 8))
+const mergedTree = mergeTrees(root1, root2);
+
+console.log(`
+  Merge Binary Trees:
+
+`)
+
+console.log('Tree 1: ', root1)
+console.log('Tree 2: ', root2)
+console.log('Merged Tree: ', mergedTree)
